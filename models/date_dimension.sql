@@ -1,3 +1,4 @@
+
 with
     cte as (
         select
@@ -8,7 +9,7 @@ with
             {{ get_season("started_at") }} as station_of_year
         from {{ source("demo", "bike") }}
         where started_at != 'started_at'
-        limit 10
+        -- limit 10
     )
 
 select *
